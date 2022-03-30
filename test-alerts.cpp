@@ -8,5 +8,5 @@ TEST_CASE("infers the breach according to limits") {
 }
 
 TEST_CASE("checkAndAlert_function") {
-  REQUIRE(sendToController(TOO_LOW) == 0);
+  sendToController(TOO_LOW);
 }
