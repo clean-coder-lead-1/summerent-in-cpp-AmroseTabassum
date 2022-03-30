@@ -8,5 +8,5 @@ TEST_CASE("infers the breach according to limits") {
 }
 
 TEST_CASE("checkAndAlert_function") {
-  REQUIRE(checkAndAlert(TO_CONTROLLER, BatteryCharacter::PASSIVE_COOLING, 0));
+  REQUIRE(sendToController(TOO_LOW));
 }
