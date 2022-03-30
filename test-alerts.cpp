@@ -8,5 +8,5 @@ TEST_CASE("infers the breach according to limits") {
 }
 
 TEST_CASE("checkAndAlert_function") {
-  REQUIRE(checkAndAlert(0, 0, 0));
+  REQUIRE(checkAndAlert(TO_CONTROLLER, PASSIVE_COOLING, 0));
 }
