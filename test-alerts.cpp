@@ -29,6 +29,6 @@ TEST_CASE("checkAndAlert_function") {
   BatteryCharacter test_obj{PASSIVE_COOLING,0};
   checkAndAlert(TO_EMAIL, test_obj, 0);
   BatteryCharacter test_obj1{MED_ACTIVE_COOLING,0};
-  checkAndAlert(TO_EMAIL, test_obj1, 45);
+  checkAndAlert(TO_CONTROLLER, test_obj1, 45);
 }
 
