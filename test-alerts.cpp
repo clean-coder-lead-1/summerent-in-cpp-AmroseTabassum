@@ -6,6 +6,7 @@
 TEST_CASE("infers the breach according to limits") {
   REQUIRE(inferBreach(12, 20, 30) == TOO_LOW);
   REQUIRE(inferBreach(30, 10, 20) == TOO_HIGH);
+  REQUIRE(inferBreach(30, 10, 40) == NORMAL);
 }
 
 TEST_CASE("classifyTemperatureBreach_function") {
@@ -24,10 +25,10 @@ TEST_CASE("sendToEmail_function") {
   sendToEmail(NORMAL);
 }
 
-// TEST_CASE("checkAndAlert_function") {
-//   BatteryCharacter test_obj{PASSIVE_COOLING,0};
-//   checkAndAlert(TO_EMAIL, test_obj, 0);
-//   BatteryCharacter test_obj1{MED_ACTIVE_COOLING,0};
-//   checkAndAlert(TO_EMAIL, test_obj1, 45);
-// }
+TEST_CASE("checkAndAlert_function") {
+  BatteryCharacter test_obj{PASSIVE_COOLING,0};
+  checkAndAlert(TO_EMAIL, test_obj, 0);
+  BatteryCharacter test_obj1{MED_ACTIVE_COOLING,0};
+  checkAndAlert(TO_EMAIL, test_obj1, 45);
+}
 
