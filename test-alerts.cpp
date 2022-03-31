@@ -12,5 +12,6 @@ TEST_CASE("sendToController_function") {
 }
 
 TEST_CASE("checkAndAlert_function") {
-  checkAndAlert(0, static_cast<CoolingType>(PASSIVE_COOLING), 0);
+  BatteryCharacter test_obj{PASSIVE_COOLING,0};
+  checkAndAlert(0, test_obj, 0);
 }
